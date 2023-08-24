@@ -4,16 +4,177 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" >
+    android:background="#2196F3">
 
-    <ImageView
-        android:id="@+id/imgGooglebtn"
-        android:layout_width="203dp"
-        android:layout_height="160dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.88"
-        app:srcCompat="@drawable/googlelogo" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+       <androidx.constraintlayout.widget.ConstraintLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:background="#2196F3">
+
+           <androidx.constraintlayout.widget.Guideline
+               android:id="@+id/guideline"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal"
+               app:layout_constraintGuide_begin="250dp" />
+
+           <de.hdodenhof.circleimageview.CircleImageView
+               android:id="@+id/avtar"
+               android:layout_width="130dp"
+               android:layout_height="150dp"
+               android:layout_marginTop="32dp"
+               app:civ_border_color="#FFFFFF"
+               app:civ_border_width="2dp"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintHorizontal_bias="0.498"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="parent"
+               tools:src="@mipmap/ic_launcher" />
+
+           <TextView
+               android:id="@+id/tvimguploadHeading"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="4dp"
+               android:fontFamily="serif"
+               android:text="MyLinkZ Login Page"
+               android:textColor="#FEFEFE"
+               android:textSize="24sp"
+               app:layout_constraintEnd_toEndOf="@+id/avtar"
+               app:layout_constraintHorizontal_bias="0.497"
+               app:layout_constraintStart_toStartOf="@+id/avtar"
+               app:layout_constraintTop_toBottomOf="@+id/avtar" />
+
+           <com.google.android.material.card.MaterialCardView
+               style="@style/custom_card_view_style"
+               android:layout_width="match_parent"
+               android:layout_height="490dp"
+               app:layout_constraintBottom_toBottomOf="parent"
+               app:layout_constraintEnd_toEndOf="parent"
+               app:layout_constraintStart_toStartOf="parent"
+               app:layout_constraintTop_toTopOf="@+id/guideline">
+
+               <androidx.constraintlayout.widget.ConstraintLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:alwaysDrawnWithCache="true">
+
+                   <EditText
+                       android:id="@+id/edtName"
+                       android:layout_width="match_parent"
+                       android:layout_height="60dp"
+                       android:layout_marginTop="48dp"
+                       android:background="@drawable/edittext_bg"
+                       android:drawableLeft="@drawable/ic_email"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/app_theme"
+                       android:ems="10"
+                       android:hint="Email"
+                       android:inputType="textEmailAddress"
+                       android:padding="8dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.497"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toTopOf="parent" />
+
+                   <EditText
+                       android:id="@+id/edtEmail"
+                       android:layout_width="match_parent"
+                       android:layout_height="60dp"
+                       android:layout_marginTop="28dp"
+                       android:background="@drawable/edittext_bg"
+                       android:drawableLeft="@drawable/ic_password"
+                       android:drawablePadding="8dp"
+                       android:drawableTint="@color/app_theme"
+                       android:ems="10"
+                       android:hint="Password"
+                       android:inputType="textPassword"
+                       android:padding="8dp"
+                       app:layout_constraintEnd_toEndOf="@+id/edtName"
+                       app:layout_constraintHorizontal_bias="0.0"
+                       app:layout_constraintStart_toStartOf="@+id/edtName"
+                       app:layout_constraintTop_toBottomOf="@+id/edtName" />
+
+                   <Button
+                       android:id="@+id/btnRegister"
+                       android:layout_width="0dp"
+                       android:layout_height="60dp"
+                       android:layout_marginStart="16dp"
+                       android:layout_marginTop="84dp"
+                       android:layout_marginEnd="16dp"
+                       android:text="SIGN IN"
+                       app:backgroundTint="@color/app_theme"
+                       app:cornerRadius="16dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.0"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/edtEmail" />
+
+                   <Button
+                       android:id="@+id/btngooglelogin"
+                       android:layout_width="0dp"
+                       android:layout_height="60dp"
+                       android:layout_marginStart="50dp"
+                       android:layout_marginEnd="50dp"
+                       android:drawableLeft="@drawable/glogo"
+                       android:text="SIGN IN WITH GOOGLE"
+                       app:backgroundTint="@color/app_theme"
+                       app:cornerRadius="16dp"
+                       app:layout_constraintEnd_toEndOf="parent"
+                       app:layout_constraintHorizontal_bias="0.0"
+                       app:layout_constraintStart_toStartOf="parent"
+                       app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+                   <TextView
+                       android:id="@+id/tvRegister"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:text="Sign Up"
+                       android:textColor="@color/app_theme"
+                       android:textSize="16sp"
+                       android:textStyle="bold"
+                       app:layout_constraintEnd_toEndOf="@+id/btngooglelogin"
+                       app:layout_constraintHorizontal_bias="0.0"
+                       app:layout_constraintStart_toEndOf="@+id/textView5"
+                       app:layout_constraintTop_toBottomOf="@+id/btngooglelogin" />
+
+                   <TextView
+                       android:id="@+id/textView5"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="20dp"
+                       android:text="Don't have an account?"
+                       android:textColor="#000000"
+                       android:textSize="16sp"
+                       app:layout_constraintEnd_toEndOf="@+id/btngooglelogin"
+                       app:layout_constraintHorizontal_bias="0.28"
+                       app:layout_constraintStart_toStartOf="@+id/btngooglelogin"
+                       app:layout_constraintTop_toBottomOf="@+id/btngooglelogin" />
+
+                   <TextView
+                       android:id="@+id/tv_incorrect"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="8dp"
+                       android:text="Incorrect Email/Password"
+                       android:textColor="#FD0000"
+                       app:layout_constraintEnd_toEndOf="@+id/edtEmail"
+                       app:layout_constraintHorizontal_bias="0.927"
+                       app:layout_constraintStart_toStartOf="@+id/edtEmail"
+                       app:layout_constraintTop_toBottomOf="@+id/edtEmail"
+                       tools:visibility="gone" />
+               </androidx.constraintlayout.widget.ConstraintLayout>
+
+           </com.google.android.material.card.MaterialCardView>
+
+       </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

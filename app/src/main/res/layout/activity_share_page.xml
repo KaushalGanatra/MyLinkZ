@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/idIVQrcode"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+         />
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/idIVQrcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30sp"
+        android:text="SCAN" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".SharePage">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_menu"
+            android:contentDescription="Hamburger"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab1"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="200dp"
+            android:layout_marginEnd="15dp"
+            android:src="@drawable/ic_dashboard"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/fabtv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DashBoard"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="220dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:background="@color/teal_200"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="140dp"
+            android:src="@drawable/ic_share"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/fabtv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Share Profile"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="160dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            android:background="@color/teal_200"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/fab3"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/ic_friends"
+            android:visibility="invisible"/>
+        <TextView
+            android:id="@+id/fabtv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friendlist"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="80dp"
+            android:layout_marginBottom="100dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@color/teal_200"
+            android:visibility="invisible"/>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>
